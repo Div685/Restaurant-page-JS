@@ -1,6 +1,10 @@
 import loadMenu from './menu';
+import homeSection from './main_tab';
 
-const homeSection = () =>  {
+const content = document.getElementById('content');
+
+
+const bannerSection = () =>  {
   const banner = document.createElement('div');
   banner.classList.add('banner');
 
@@ -32,33 +36,60 @@ const homeSection = () =>  {
 const navSection = () => {
  const navBar = document.createElement('nav');
  navBar.classList.add('nav');
+ navBar.setAttribute('id', 'nav')
+
+  // Home Item
+  const homeBar = document.createElement('button');
+  homeBar.classList.add('nav_button');
+  homeBar.setAttribute('id', 'nav-homeTab1');
+  homeBar.innerText = 'Home';
 
   // Menu Item  
  const menuBar = document.createElement('button');
  menuBar.classList.add('nav_button');
  menuBar.setAttribute('id', 'nav-menu');
  menuBar.innerText = "Menu";
-//  menuBar.addEventListener("click", (e) => {
-//    if(e.target.classList.contains('active')) return;
-//    loadMenu();
-//  });
 
   //  Contact Item
  const contactBar = document.createElement('button');
  contactBar.classList.add('nav_button');
+ contactBar.setAttribute('id', 'nav-contact');
  contactBar.innerText = "Contact";
 
-
+ navBar.appendChild(homeBar);
  navBar.appendChild(menuBar);
  navBar.appendChild(contactBar);
 
  return navBar;
 }
 
+
+const tabSection = () => {
+  const mainTab = document.createElement('div');
+  mainTab.classList.add('main_tab');
+  mainTab.setAttribute('id', 'sections')
+  
+  return mainTab;
+}
+
+const setActiveButton = (button) => {
+  const buttons = document.querySelectorAll('.nav_button');
+
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove('active');
+    }
+  });
+
+  button.classList.add('active');
+}
+
 const initialHomePage = () => {
-  const content = document.getElementById('content');
-  content.appendChild(homeSection());
+  content.appendChild(bannerSection());
   content.appendChild(navSection());
+  content.appendChild(tabSection());
+  
+  setActiveButton(document.querySelector(".nav_button"));
 }
 
 export default initialHomePage;

@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: #f7f7f7;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .banner {
@@ -68,4 +70,63 @@ nav button {
 
 nav button:hover {
   box-shadow: 10px 10px 20px #aaa;
+}
+
+/* Tab section */
+
+.main_tab {
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 0 30px 0;
+}
+
+.contact_main {
+  padding: 2rem;
+  box-shadow: 0 0 10px #ccc;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_main h1 {
+  color: #37373f;
+}
+
+.home__nav {
+  padding: 2rem;
+  box-shadow: 0 0 10px #ccc;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__nav h1 {
+  color: #37373f;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.menu__tab {
+  padding: 2rem;
+  box-shadow: 0 0 10px #ccc;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_button {
+  border: none;
+  border-style: none;
+  outline: none;
+}
+
+.nav_button.active {
+  border-bottom: 2px solid #37373f;
+}
+
+.nav_button:hover{
+  transform: translateY(-10%);
 }
