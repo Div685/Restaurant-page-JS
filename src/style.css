@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+}
+
+.banner_left {
+  width: 35%;
+  padding: 3rem;
+}
+
+.banner_left h2 {
+  color: #37373f;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6em;
+}
+
+.banner_right {
+  width: 65%;
+}
+
+.img-fluid {
+  border-radius: 520% 0% 500% 400%;
+  height: 85vh;
+}
