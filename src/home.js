@@ -94,12 +94,24 @@ const setActiveButton = (button) => {
   button.classList.add('active');
 }
 
+const footerSection = () => {
+  const footerDiv = document.createElement('footer');
+  footerDiv.classList.add('footer');
+
+  const footerText = document.createElement('span');
+  footerText.innerHTML = 'Copyright &copy; 2021 Divyesh';
+  footerDiv.appendChild(footerText);
+
+  return footerDiv;
+}
+
 const initialHomePage = () => {
   content.appendChild(bannerSection());
   content.appendChild(navSection());
   content.appendChild(tabSection());
   
   setActiveButton(document.querySelector(".nav_button"));
+  content.appendChild(footerSection());
 }
 
 export default initialHomePage;
