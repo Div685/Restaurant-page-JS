@@ -1,3 +1,6 @@
+import foodLists from './foodList.json';
+import foodItem from './foodItem';
+
 const loadMenu = () => {
   
   // setting div
@@ -12,21 +15,13 @@ const loadMenu = () => {
   const divCard = document.createElement('div');
   divCard.classList.add('card__div');
 
+  foodLists.forEach((item) => {
+    divCard.appendChild(foodItem(item));
+    console.log(item);
+  });
 
-  // const divFlex = document.createElement('div');
-  // divFlex.id = 'div-flex';
-
-  // const breakfast = document.createElement('ul');
-  // let ulContent = '<h2> Breakfast </h2><li>YOGURT BERRY PARFAIT ... ($5)</li><li>OVERNIGHT OATS & CHIA ... ($5)</li><li>CLASSIC ... ($5)</li><li>MARCHIO ... ($5)</li>';
-  // breakfast.innerHTML = ulContent;
-  // divFlex.append(breakfast);
-
-  // const daily = document.createElement('ul');
-  // ulContent = '<h2> Daily Pastries </h2><li>CORNETTO ... ($5)</li><li>SPECORINO ... ($5)</li><li>CORNETTO DI CIOCCOLATO ... ($5)</li><li>CIAMBELLONE ... ($5)</li>';
-  // daily.innerHTML = ulContent;
-  // divFlex.append(daily);
-
-  // divMenu.append(divFlex);
+  console.log(foodLists);
+  divMenu.appendChild(divCard);
 
   return divMenu;
 }

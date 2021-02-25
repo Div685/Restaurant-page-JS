@@ -42,23 +42,32 @@ const navSection = () => {
   const homeBar = document.createElement('button');
   homeBar.classList.add('nav_button');
   homeBar.setAttribute('id', 'nav-homeTab1');
+  const homeBarLink = document.createElement('a');
+  homeBarLink.setAttribute('href', '#nav-homeTab');
   homeBar.innerText = 'Home';
+  homeBarLink.appendChild(homeBar);
 
   // Menu Item  
  const menuBar = document.createElement('button');
  menuBar.classList.add('nav_button');
  menuBar.setAttribute('id', 'nav-menu');
  menuBar.innerText = "Menu";
+ const menuBarLink = document.createElement('a');
+ menuBarLink.setAttribute('href', '#nav-menu');
+ menuBarLink.appendChild(menuBar);
 
   //  Contact Item
  const contactBar = document.createElement('button');
  contactBar.classList.add('nav_button');
  contactBar.setAttribute('id', 'nav-contact');
  contactBar.innerText = "Contact";
+ const contactBarLink = document.createElement('a');
+ contactBarLink.setAttribute('href', '#nav-contact');
+ contactBarLink.appendChild(contactBar);
 
- navBar.appendChild(homeBar);
- navBar.appendChild(menuBar);
- navBar.appendChild(contactBar);
+ navBar.appendChild(homeBarLink);
+ navBar.appendChild(menuBarLink);
+ navBar.appendChild(contactBarLink);
 
  return navBar;
 }

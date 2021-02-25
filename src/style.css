@@ -3,6 +3,7 @@
   padding: 0;
   background-color: #f7f7f7;
   font-family: 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
 }
 
 .banner {
@@ -129,4 +130,44 @@ nav button:hover {
 
 .nav_button:hover{
   transform: translateY(-10%);
+}
+
+.card__div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  margin: 10px 0 0 0;
+}
+
+.foody {
+  display: flex;
+}
+
+.foody h4 {
+  font-size: 20px;
+}
+
+.right_div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.foody img {
+  width: 30%;
+  height: 130px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  margin: 0 10px 0 0;
+}
+
+.foody p {
+  margin: -20px 0 0 0;
+}
+
+.foody span {
+  color: #aaa;
+  margin: 0 0 10px 0;
 }
