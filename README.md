@@ -7,7 +7,7 @@
 
 ### You can access a Live Demo [HERE](https://div685.github.io/JS-Library/)
 
-![Screenshot](./assets/images/screencapture.png)
+![Screenshot](./screencapture.png)
 
 ## Built With
 
