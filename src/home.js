@@ -1,10 +1,6 @@
-import loadMenu from './menu';
-import homeSection from './main_tab';
-
 const content = document.getElementById('content');
 
-
-const bannerSection = () =>  {
+const bannerSection = () => {
   const banner = document.createElement('div');
   banner.classList.add('banner');
 
@@ -13,31 +9,31 @@ const bannerSection = () =>  {
   bannerLeft.classList.add('banner_left');
   const logo = document.createElement('img');
   logo.classList.add('span');
-  logo.setAttribute('src', "https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/gwnfuhywcvf7jrordlk0")
-  
+  logo.setAttribute('src', 'https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/gwnfuhywcvf7jrordlk0');
+
   const hText = document.createElement('h2');
   hText.innerText = 'Enjoy the delicious food experience';
-  
+
   bannerLeft.appendChild(logo);
   bannerLeft.appendChild(hText);
-  
+
   // right banner
   const bannerRight = document.createElement('div');
   bannerRight.classList.add('banner_right');
   const rightImg = document.createElement('img');
-  rightImg.setAttribute('src', "https://www.tasteofhome.com/wp-content/uploads/2019/08/group-bombay-chat-food-includes-golgappapanipuri-shutterstock_1422412163.jpg");
+  rightImg.setAttribute('src', 'https://www.tasteofhome.com/wp-content/uploads/2019/08/group-bombay-chat-food-includes-golgappapanipuri-shutterstock_1422412163.jpg');
   rightImg.classList.add('img-fluid');
   bannerRight.appendChild(rightImg);
 
   banner.appendChild(bannerLeft);
   banner.appendChild(bannerRight);
   return banner;
-}
+};
 
 const navSection = () => {
- const navBar = document.createElement('nav');
- navBar.classList.add('nav');
- navBar.setAttribute('id', 'nav')
+  const navBar = document.createElement('nav');
+  navBar.classList.add('nav');
+  navBar.setAttribute('id', 'nav');
 
   // Home Item
   const homeBar = document.createElement('button');
@@ -48,39 +44,39 @@ const navSection = () => {
   homeBar.innerText = 'Home';
   homeBarLink.appendChild(homeBar);
 
-  // Menu Item  
- const menuBar = document.createElement('button');
- menuBar.classList.add('nav_button');
- menuBar.setAttribute('id', 'nav-menu');
- menuBar.innerText = "Menu";
- const menuBarLink = document.createElement('a');
- menuBarLink.setAttribute('href', '#nav-menu');
- menuBarLink.appendChild(menuBar);
+  // Menu Item
+  const menuBar = document.createElement('button');
+  menuBar.classList.add('nav_button');
+  menuBar.setAttribute('id', 'nav-menu');
+  menuBar.innerText = 'Menu';
+  const menuBarLink = document.createElement('a');
+  menuBarLink.setAttribute('href', '#nav-menu');
+  menuBarLink.appendChild(menuBar);
 
   //  Contact Item
- const contactBar = document.createElement('button');
- contactBar.classList.add('nav_button');
- contactBar.setAttribute('id', 'nav-contact');
- contactBar.innerText = "Contact";
- const contactBarLink = document.createElement('a');
- contactBarLink.setAttribute('href', '#nav-contact');
- contactBarLink.appendChild(contactBar);
+  const contactBar = document.createElement('button');
+  contactBar.classList.add('nav_button');
+  contactBar.setAttribute('id', 'nav-contact');
+  contactBar.innerText = 'Contact';
+  const contactBarLink = document.createElement('a');
+  contactBarLink.setAttribute('href', '#nav-contact');
+  contactBarLink.appendChild(contactBar);
 
- navBar.appendChild(homeBarLink);
- navBar.appendChild(menuBarLink);
- navBar.appendChild(contactBarLink);
+  navBar.appendChild(homeBarLink);
+  navBar.appendChild(menuBarLink);
+  navBar.appendChild(contactBarLink);
 
- return navBar;
-}
+  return navBar;
+};
 
 
 const tabSection = () => {
   const mainTab = document.createElement('div');
   mainTab.classList.add('main_tab');
-  mainTab.setAttribute('id', 'sections')
-  
+  mainTab.setAttribute('id', 'sections');
+
   return mainTab;
-}
+};
 
 const setActiveButton = (button) => {
   const buttons = document.querySelectorAll('.nav_button');
@@ -92,7 +88,7 @@ const setActiveButton = (button) => {
   });
 
   button.classList.add('active');
-}
+};
 
 const footerSection = () => {
   const footerDiv = document.createElement('footer');
@@ -103,15 +99,15 @@ const footerSection = () => {
   footerDiv.appendChild(footerText);
 
   return footerDiv;
-}
+};
 
 const initialHomePage = () => {
   content.appendChild(bannerSection());
   content.appendChild(navSection());
   content.appendChild(tabSection());
-  
-  setActiveButton(document.querySelector(".nav_button"));
+
+  setActiveButton(document.querySelector('.nav_button'));
   content.appendChild(footerSection());
-}
+};
 
 export default initialHomePage;

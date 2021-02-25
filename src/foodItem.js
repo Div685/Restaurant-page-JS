@@ -1,8 +1,7 @@
-const foodItem = ({img, price, name}) => {
-  
+const foodItem = ({ img, price, name }) => {
   const foody = document.createElement('div');
   foody.classList.add('foody');
-  
+
   const image = document.createElement('img');
   image.setAttribute('src', img);
 
@@ -14,7 +13,7 @@ const foodItem = ({img, price, name}) => {
   rightDiv.appendChild(nameTitle);
 
   const description = document.createElement('p');
-  description.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit... ";
+  description.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit... ';
   rightDiv.appendChild(description);
 
   const prc = document.createElement('span');
@@ -27,6 +26,6 @@ const foodItem = ({img, price, name}) => {
   // foody.appendChild(prc);
 
   return foody;
-}
+};
 
 export default foodItem;

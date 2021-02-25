@@ -2,7 +2,6 @@ import foodLists from './foodList.json';
 import foodItem from './foodItem';
 
 const loadMenu = () => {
-  
   // setting div
   const divMenu = document.createElement('div');
   divMenu.classList.add('menu__tab');
@@ -17,13 +16,11 @@ const loadMenu = () => {
 
   foodLists.forEach((item) => {
     divCard.appendChild(foodItem(item));
-    console.log(item);
   });
 
-  console.log(foodLists);
   divMenu.appendChild(divCard);
 
   return divMenu;
-}
+};
 
 export default loadMenu;

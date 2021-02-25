@@ -1,7 +1,7 @@
 import './style.css';
 import initialHomePage from './home';
 import loadMenu from './menu';
-import loadContact from  './contact';
+import loadContact from './contact';
 import homeSection from './main_tab';
 
 initialHomePage();
@@ -19,13 +19,13 @@ const setSection = (section) => {
 tabSections.appendChild(homeSection());
 
 document.addEventListener('click', (e) => {
-  if(e.target && e.target.id === 'nav-menu'){
+  if (e.target && e.target.id === 'nav-menu') {
     const section = loadMenu();
     setSection(section);
-  }else if (e.target && e.target.id === 'nav-contact') {
+  } else if (e.target && e.target.id === 'nav-contact') {
     const section = loadContact();
     setSection(section);
-  }else if (e.target && e.target.id === 'nav-homeTab1') {
+  } else if (e.target && e.target.id === 'nav-homeTab1') {
     const section = homeSection();
     setSection(section);
   }

@@ -22,6 +22,6 @@ const homeSection = () => {
   divHome.appendChild(details);
 
   return divHome;
-}
+};
 
 export default homeSection;
