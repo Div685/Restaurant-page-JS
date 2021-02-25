@@ -11,9 +11,10 @@ const bannerSection = () =>  {
   // Left side banner
   const bannerLeft = document.createElement('div');
   bannerLeft.classList.add('banner_left');
-  const logo = document.createElement('span');
+  const logo = document.createElement('img');
   logo.classList.add('span');
-  logo.innerText = "Div's kitchen";
+  logo.setAttribute('src', "https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/gwnfuhywcvf7jrordlk0")
+  
   const hText = document.createElement('h2');
   hText.innerText = 'Enjoy the delicious food experience';
   
