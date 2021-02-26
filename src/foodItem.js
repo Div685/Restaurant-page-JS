@@ -23,7 +23,6 @@ const foodItem = ({ img, price, name }) => {
 
   foody.appendChild(image);
   foody.appendChild(rightDiv);
-  // foody.appendChild(prc);
 
   return foody;
 };

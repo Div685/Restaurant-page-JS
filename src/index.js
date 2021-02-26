@@ -9,9 +9,9 @@ initialHomePage();
 const tabSections = document.getElementById('sections');
 
 const setSection = (section) => {
-  // reset div Section with empty html
+
   tabSections.innerHTML = '';
-  // append new section to tab
+
   tabSections.append(section);
 };
 
