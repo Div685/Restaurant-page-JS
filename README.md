@@ -2,10 +2,10 @@
 
 ### Foody Restaurant Page
 
-> A simple Restaurant website, The main goal for this website was to use DOM maniplation by dynamically rendering a simple homepage. Developed using: HTML, CSS, and Javascript.
+> A simple Restaurant website. The main goal for this website was to use DOM manipulation by dynamically rendering a simple homepage. Developed using: HTML, CSS, and Javascript.
 
 
-### You can access a Live Demo [HERE](https://div685.github.io/JS-Library/)
+### You can access a Live Demo [HERE](https://unruffled-ride-1dea3e.netlify.app/)
 
 ![Screenshot](./screencapture.png)
 
@@ -40,7 +40,7 @@ To get a local copy up and running follow these simple steps.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Div685/Restaurant-page-JS/issues).
 
