@@ -93,9 +93,10 @@ const setActiveButton = (button) => {
 const footerSection = () => {
   const footerDiv = document.createElement('footer');
   footerDiv.classList.add('footer');
+  const date = new Date().getFullYear();
 
   const footerText = document.createElement('span');
-  footerText.innerHTML = 'Copyright &copy; 2021 Divyesh';
+  footerText.innerHTML = `Copyright &copy; ${date} Divyesh`;
   footerDiv.appendChild(footerText);
 
   return footerDiv;
