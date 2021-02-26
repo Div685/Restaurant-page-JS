@@ -9,7 +9,6 @@ initialHomePage();
 const tabSections = document.getElementById('sections');
 
 const setSection = (section) => {
-
   tabSections.innerHTML = '';
 
   tabSections.append(section);
