@@ -38,6 +38,7 @@ const navSection = () => {
   // Home Item
   const homeBar = document.createElement('button');
   homeBar.classList.add('nav_button');
+  homeBar.classList.add('active');
   homeBar.setAttribute('id', 'nav-homeTab1');
   const homeBarLink = document.createElement('a');
   homeBarLink.setAttribute('href', '#nav-homeTab');
@@ -78,16 +79,22 @@ const tabSection = () => {
   return mainTab;
 };
 
-const setActiveButton = (button) => {
+const setActiveButton = () => {
   const buttons = document.querySelectorAll('.nav_button');
 
-  buttons.forEach((button) => {
-    if (button !== this) {
-      button.classList.remove('active');
-    }
-  });
+  if (buttons) {
+    buttons.forEach( (el, key) => {
+      el.addEventListener('click', () => {
+        el.classList.add('active');
 
-  button.classList.add('active');
+        buttons.forEach( (ell, els) => {
+          if(key !== els) {
+            ell.classList.remove('active');
+          }
+        });
+      });
+    });
+  }
 };
 
 const footerSection = () => {
@@ -107,7 +114,7 @@ const initialHomePage = () => {
   content.appendChild(navSection());
   content.appendChild(tabSection());
 
-  setActiveButton(document.querySelector('.nav_button'));
+  setActiveButton();
   content.appendChild(footerSection());
 };
 
